@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express();
 
-router.use("/api/users", require("./UserRoutrer"))
+router.use("/api/users", require("./UserRoutes"))
 
 // teste route
 
