@@ -11,9 +11,6 @@ const validate = require('../middlewares/handleValidation');
 const { imageUpload } = require('../middlewares/imageUpload');
 const { getUserByid } = require('../controllers/UserController');
 
-function soma(nmr1, nmr2) {
-    return nmr1 + nmr2;
-}
 
 // Routes
 router.post("/", authGuard, imageUpload.single("image"), photoInsertValidation(), validate, insertPhoto);
@@ -27,6 +24,3 @@ router.put("/like/:id", authGuard, likePhoto);
 router.put("/comment/:id", authGuard, commentValidation(), validate, commentPhoto);
 
 module.exports = router;
-
-
-
